@@ -1,13 +1,30 @@
 let box = document.querySelector(".box");
-let nums = document.querySelectorAll(".numbers-holder > .num");
-let numsArr = Array.from(nums);
+let numbersHolder = document.querySelector(".numbers-holder");
 let replayBtn = document.querySelector(".replay-btn");
+
+let numberOfNums = 20;
+let nums = [];
+
+function createNums() {
+  numbersHolder.innerHTML = "";
+
+  for (let i = 0; i <= numberOfNums; i++) {
+    let span = document.createElement("span");
+    span.className = "num";
+    if (i === 0) span.className = "num in";
+    span.append(document.createTextNode(numberOfNums - i));
+    numbersHolder.append(span);
+  }
+  nums = document.querySelectorAll(".numbers-holder > .num");
+  changeNumbers();
+}
+createNums();
 
 function changeNumbers() {
   let countDown = setInterval(() => {
     let curIndex;
 
-    numsArr.forEach((num, index) => {
+    nums.forEach((num, index) => {
       if (num.classList.contains("in")) curIndex = index;
       num.classList.remove("in");
     });
@@ -16,14 +33,13 @@ function changeNumbers() {
       box.classList.add("flip");
       clearInterval(countDown);
     } else {
-      numsArr[curIndex + 1].classList.add("in");
+      nums[curIndex + 1].classList.add("in");
     }
   }, 1000);
 }
-changeNumbers();
 
 replayBtn.addEventListener("click", (e) => {
-  numsArr.forEach((num, index) => {
+  document.querySelectorAll(".numbers-holder > .num").forEach((num, index) => {
     num.classList.remove("in");
     if (index === 0) num.classList.add("in");
   });

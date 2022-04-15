@@ -40,7 +40,8 @@ h4 {
 }
 .numbers-holder {
   height: 50px;
-  width: 100%;
+  width: 100px;
+  margin: 0 auto;
   position: relative;
   overflow: hidden;
 }
@@ -52,7 +53,7 @@ h4 {
   left: 50%;
   color: #3f51b5;
   transform: translate(-50%, 5px) rotate(120deg);
-  transform-origin: center bottom;
+  transform-origin: center 80px;
 }
 .numbers-holder .num.in {
   animation: enter 1s ease;
