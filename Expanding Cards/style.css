@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+.imgs-holder {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.imgs-holder .box {
+  height: 80vh;
+  width: 100px;
+  position: relative;
+  transition: 0.3s;
+}
+.imgs-holder .box.active {
+  flex: 1;
+}
+.imgs-holder .image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.imgs-holder .box.active .text {
+  position: absolute;
+  bottom: 30px;
+  left: 40px;
+  color: white;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  opacity: 0;
+  transition: 0.5s;
+}
+@media (max-width: 991px) {
+  .imgs-holder {
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  .imgs-holder .box {
+    height: 100px;
+    width: 100%;
+  }
+}
