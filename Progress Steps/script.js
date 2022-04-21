@@ -3,7 +3,7 @@ let next = document.querySelector(".next");
 let prev = document.querySelector(".prev");
 
 next.addEventListener("click", (e) => {
-  prev.classList.remove("blocked");
+  prev.removeAttribute("disabled");
 
   let index;
   steps.forEach((step, idx) => {
@@ -11,13 +11,13 @@ next.addEventListener("click", (e) => {
       index = idx;
   });
 
-  if (index === steps.length - 2) next.classList.add("blocked");
+  if (index === steps.length - 2) next.setAttribute("disabled", "");
 
   steps[index].nextElementSibling.classList.add("complete");
 });
 
 prev.addEventListener("click", (e) => {
-  next.classList.remove("blocked");
+  next.removeAttribute("disabled");
 
   let index = 0;
   steps.forEach((step, idx) => {
@@ -25,7 +25,7 @@ prev.addEventListener("click", (e) => {
       index = idx;
   });
 
-  if (index === 1) prev.classList.add("blocked");
+  if (index === 1) prev.setAttribute("disabled", "");
 
   steps[index].classList.remove("complete");
 });

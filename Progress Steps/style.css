@@ -63,10 +63,10 @@ body {
   padding: 10px 30px;
   transition: background-color 0.3s, opacity 0.3s, transform 0.05s;
 }
-.buttons .btn.blocked {
+.buttons .btn:disabled {
   background-color: gray;
   opacity: 0.4;
-  pointer-events: none;
+  cursor: not-allowed;
 }
 .buttons .btn:active {
   transform: scale(0.95);
