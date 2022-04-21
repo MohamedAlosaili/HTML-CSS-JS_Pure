@@ -31,3 +31,6 @@ const scale = (num, in_min, in_max, out_min, out_max) => {
 };
 console.log(((55 - 0) * (0 - 1)) / (100 - 0) + 1);
 */
+
+// console.log(30 - (12 / 100) * 30);
+// console.log(outMax - (number / inMax) * outMax);
