@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: #333;
+    overflow-x: hidden;
+}
+.toggler {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+    height: 200px;
+    width: 200px;
+    background-color: #ef5350;
+    border-radius: 50%;
+    transition: 0.5s;
+    z-index: 100;
+}
+.toggler.open{
+    transform: rotate(-90deg);
+}
+.btn {
+    position: absolute;
+    top: 140px;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    color: white;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.btn.open {
+    left: 140px;
+}
+.btn.close {
+    left: 60px;
+}
+.side-nav {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+}
+.side-nav .link {
+    position: relative;
+    left: -100%;
+    display: block;
+    margin-bottom: 40px;
+    margin-right: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    transition: 0.5s;
+}
+.side-nav.active .link {
+    transition-delay: 0.2s;
+}
+.side-nav.active .link:first-child{
+    left: 40px;
+}
+.side-nav.active .link:nth-child(2){
+    left: 55px;
+}
+.side-nav.active .link:last-child{
+    left: 70px;
+}
+.side-nav .link span {
+    font-size: 20px;
+    margin-right: 10px;
+}
+.my-dog {
+    background-color: #fff;
+    transition: 0.5s;
+    transform-origin: top left;
+}
+.my-dog.nav-open {
+    transform: rotate(-20deg);
+}
+.container {
+    margin: 0 auto;
+    padding: 90px 15px; 
+    transition: 0.5s;
+}
+@media (min-width: 576px){
+    .container {
+        max-width: 540px;
+    }
+} 
+@media (min-width: 768px){
+    .container {
+        max-width: 720px;
+    }
+} 
+@media (min-width: 992px){
+    .container {
+        max-width: 960px;
+    }
+} 
+@media (min-width: 1200px){
+    .container {
+        max-width: 1140px;
+    }
+} 
+.title {
+    font-size: 30px;
+    margin-bottom: 5px;;
+}
+.name {
+    font-size: 14px;
+    font-style: italic;
+    color: #777;
+}
+.text {
+    margin-top: 20px;
+    line-height: 1.6;
+}
+.sub-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.image {
+    max-width: 100%;
+}
