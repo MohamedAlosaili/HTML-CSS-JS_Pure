@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+:root {
+  --primary-color: #006064;
+  --secondary-color: #338084;
+  --alt-color: #79c4c8;
+  --duration: 0.3s;
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+  height: 100vh;
+}
+.container {
+  color: white;
+  background-color: var(--primary-color);
+  padding: 40px;
+  border-radius: 5px;
+  width: 375px;
+}
+.title {
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.input-box {
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.input,
+label,
+.register a {
+  transition: All var(--duration) ease;
+}
+.input {
+  width: 100%;
+  height: 40px;
+  color: white;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  caret-color: white;
+  position: relative;
+  z-index: 1;
+}
+.input.no-empty {
+  outline: none;
+  border-color: var(--alt-color);
+}
+.input.no-empty + label {
+  color: var(--alt-color);
+}
+label {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  left: 2px;
+  letter-spacing: -2px;
+}
+label span {
+  display: inline-block;
+}
+label span.up {
+  animation: moveUp 0.3s ease forwards;
+}
+label span.down {
+  animation: moveDown 0.3s ease forwards;
+}
+@keyframes moveUp {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(10%);
+  }
+  80% {
+    transform: translateY(-120%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+@keyframes moveDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  20% {
+    transform: translateY(-110%);
+  }
+  80% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+input[type="submit"] {
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--primary-color);
+  background-color: var(--alt-color);
+  border: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+input[type="submit"]:focus,
+input[type="submit"]:active {
+  outline: none;
+  transform: scale(0.98);
+}
+.register {
+  margin-top: 10px;
+}
+.register a {
+  text-decoration: none;
+  color: var(--alt-color);
+}
+.register a:hover,
+.register a:focus {
+  outline: none;
+  text-decoration: underline;
+}
