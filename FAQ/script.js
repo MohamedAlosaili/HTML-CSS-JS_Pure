@@ -37,3 +37,7 @@ function resizeBox(currentBox) {
   });
 }
 resizeBox(null);
+
+window.addEventListener("resize", () => {
+  resizeBox(null);
+});
