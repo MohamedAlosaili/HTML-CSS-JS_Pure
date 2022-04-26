@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  min-height: 100vh;
+  background-color: #00695c;
+  color: white;
+}
+.container {
+  width: 95%;
+  max-width: 500px;
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.descript {
+  font-weight: 500;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+.choice {
+  width: 100%;
+  height: 100px;
+  resize: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+.choices-holder {
+  display: flex;
+  flex-wrap: wrap;
+}
+.choices-holder span {
+  display: block;
+  background-color: #bf360c;
+  font-weight: 500;
+  padding: 15px;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  line-break: anywhere;
+  text-align: left;
+  line-height: 1.5;
+  transition: 0.1s;
+}
+.choices-holder span.the-chosen {
+  position: relative;
+  background-color: purple;
+}
