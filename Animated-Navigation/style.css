@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #e0f7fa 50%, #607d8b 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.3);
+}
+.container .nav {
+  list-style: none;
+  width: 0;
+  display: flex;
+  gap: 10px;
+  transition: 1s;
+  transform: translatex(60px);
+}
+.container.open .nav {
+  width: 250px;
+  margin-right: 20px;
+  transform: translatex(0);
+}
+.container .nav .link {
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  color: #666;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.5s, transform 1s;
+}
+.container.open .nav .link {
+  transform: rotateY(360deg);
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+.btn {
+  height: 25px;
+  width: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background-color: #fff;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  z-index: 100;
+}
+.btn:focus {
+  outline: none;
+}
+.btn span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #00bcd4;
+  transition: 0.3s;
+}
+.btn.active span:first-child {
+  animation: close1 0.1s linear forwards;
+}
+.btn.active span:last-child {
+  animation: close2 0.1s linear forwards;
+}
+@keyframes close1 {
+  0% {
+    transform-origin: right bottom;
+    transform: rotate(0);
+  }
+  100% {
+    transform-origin: right bottom;
+    transform: translateY(-5px) rotate(-45deg);
+  }
+}
+@keyframes close2 {
+  0% {
+    transform-origin: right top;
+    transform: rotate(0);
+  }
+  100% {
+    transform-origin: right top;
+    transform: translateY(6px) rotate(45deg);
+  }
+}
+.btn.rotate span:first-child {
+  animation: rotating1 0.3s linear 3;
+}
+.btn.rotate span:last-child {
+  animation: rotating2 0.3s linear 3;
+}
+@keyframes rotating1 {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes rotating2 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
