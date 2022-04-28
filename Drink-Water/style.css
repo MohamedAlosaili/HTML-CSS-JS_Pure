@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+::selection {
+  background-color: #fff;
+  color: #2196f3;
+}
+body {
+  height: 100vh;
+  background-color: #2196f3;
+  text-align: center;
+  color: #fefefa;
+}
+.container {
+  padding: 40px 15px;
+}
+.title {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.goal-bottle {
+  height: 300px;
+  width: 150px;
+  background-color: white;
+  border-radius: 0 0 30px 30px;
+  border: 4px solid #0d47a1;
+  margin: 40px auto;
+  overflow: hidden;
+  position: relative;
+}
+.remain,
+.drank {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0d47a1;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.remain {
+  top: 0;
+  height: 100%;
+  flex-direction: column;
+}
+.remain span:first-child {
+  font-size: 20px;
+  font-weight: 500;
+}
+.remain span:last-child {
+  font-size: 14px;
+  font-weight: 300;
+}
+.drank {
+  bottom: 0;
+  height: 0;
+  background-color: #42a5f5;
+  font-size: 25px;
+}
+.note {
+  font-weight: 500;
+}
+.glasses-holder {
+  width: 95%;
+  max-width: 300px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 20px auto;
+}
+.glass {
+  height: 100px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  background-color: #fff;
+  color: #0d47a1;
+  margin: 10px;
+  border: 4px solid #0d47a1;
+  border-radius: 0 0 20px 20px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.glass.done {
+  background-color: #42a5f5;
+  color: white;
+}
