@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  --main-color: #fff;
+  --secondary-color: #000;
+  --transition-duration: 0.5s;
+}
+body.dark {
+  --main-color: #000;
+  --secondary-color: #fff;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  transition: background-color var(--transition-duration);
+}
+.switch-mode {
+  background-color: var(--secondary-color, #000);
+  border: none;
+  border-radius: 4px;
+  color: var(--main-color, #fff);
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: color var(--transition-duration),
+    background-color var(--transition-duration);
+}
+.switch-mode:active {
+  transform: scale(0.98);
+}
+.tarditional-clock {
+  height: 300px;
+  width: 300px;
+  background-color: #e0e0e0;
+  border: 4px solid #ba8c63;
+  border-radius: 50%;
+  position: relative;
+  margin: 100px 0;
+}
+.tarditional-clock::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 15px;
+  width: 15px;
+  background-color: crimson;
+  border-radius: 50%;
+  z-index: 100;
+}
+.tarditional-clock .small-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) rotate(calc(var(--d) * 30deg));
+  transform-origin: 1px 146px;
+  height: var(--h);
+  width: 2px;
+  background-color: #000;
+}
+.hour-line,
+.minute-line,
+.second-line {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%) rotate(360deg);
+  width: 3px;
+  border-radius: 10px;
+  transform-origin: center bottom;
+  background-color: #000;
+}
+.hour-line {
+  height: 65px;
+}
+.minute-line {
+  height: 95px;
+}
+.second-line {
+  height: 110px;
+  background-color: crimson;
+}
+.digital-clock {
+  font-size: 60px;
+  font-weight: 300;
+  margin-bottom: 30px;
+  color: var(--secondary-color);
+  transition: color var(--transition-duration);
+}
+.digital-clock .seconds {
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+  font-size: 30px;
+}
+.date {
+  font-size: 20px;
+  color: #999;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.date .day {
+  height: 30px;
+  width: 30px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color, #000);
+  border-radius: 50%;
+  color: var(--main-color, #fff);
+  transition: color 0.5s, background-color 0.5s;
+}
