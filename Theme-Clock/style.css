@@ -7,11 +7,11 @@
 }
 body {
   --main-color: #fff;
-  --secondary-color: #000;
+  --secondary-color: #333;
   --transition-duration: 0.5s;
 }
 body.dark {
-  --main-color: #000;
+  --main-color: #333;
   --secondary-color: #fff;
 }
 .container {
@@ -64,7 +64,7 @@ body.dark {
   transform-origin: 1px 146px;
   height: var(--h);
   width: 2px;
-  background-color: #000;
+  background-color: #333;
 }
 .hour-line,
 .minute-line,
@@ -80,6 +80,7 @@ body.dark {
 }
 .hour-line {
   height: 65px;
+  background-color: #777;
 }
 .minute-line {
   height: 95px;
