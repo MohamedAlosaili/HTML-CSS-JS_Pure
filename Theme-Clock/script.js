@@ -29,10 +29,11 @@ function restTime() {
   const minutePosition = `${currentMinutes * 6}deg`;
   minute.style.transform = `translateX(-50%) rotate(${minutePosition})`;
 
-  if (currentHours > 12) {
-    currentHours -= 12;
-    period = "PM";
-  } else if (currentHours === 0) currentHours = 12;
+  if (currentHours >= 12) period = "PM";
+
+  if (currentHours > 12) currentHours -= 12;
+  else if (currentHours === 0) currentHours = 12;
+
   const hourPosition = `${
     currentHours * 30 + Math.round(currentMinutes / 2)
   }deg`;
