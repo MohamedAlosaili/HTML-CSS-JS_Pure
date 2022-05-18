@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 950px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+/* Start Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #222;
+  z-index: 100;
+  transition: 0.3s;
+}
+.header.sticky {
+  background-color: #fff;
+}
+.header .nav-bar {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+}
+.header.sticky .nav-bar {
+  height: 50px;
+}
+.header .nav-bar .logo {
+  font-size: 25px;
+}
+.header .nav-bar * {
+  font-weight: 500;
+  transition: 0.3s;
+  color: #fff;
+}
+.header.sticky .nav-bar * {
+  color: #000;
+}
+.header .nav-bar *:hover,
+.header .nav-links .active {
+  color: crimson;
+}
+.header .nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+/* Start Landing */
+.landing {
+  background-image: url("imgs/green-chameleon-WvuTnXz1hSc-unsplash.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+.landing::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0 0 0 / 0.7);
+}
+.landing .container {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.landing .title {
+  font-size: 50px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+.landing .text {
+  font-size: 20px;
+}
+/* Start Content Section */
+section.content {
+  padding: 50px 0;
+}
+.content .title {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.content .text {
+  color: #777;
+  line-height: 1.5;
+}
