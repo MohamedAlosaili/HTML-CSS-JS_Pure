@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #eee;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 350px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.card-img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+.card-body {
+  padding: 30px;
+}
+.card-body .title {
+  margin-bottom: 20px;
+}
+.card-body .text {
+  color: #777;
+}
+.card-body .info {
+  display: flex;
+  margin-top: 20px;
+}
+.card-body .info .info-img {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.card-body .info .info-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+}
+.card-body .info .date {
+  color: #777;
+  font-size: 12px;
+}
+/* Skeleton Style */
+.skeleton {
+  background-color: #e6e6e6;
+  background-size: 200% 100%;
+  position: relative;
+  overflow: hidden;
+}
+.skeleton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 30%;
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    #d6d6d6,
+    transparent
+  );
+  animation: skeleton-load 1s infinite;
+}
+@keyframes skeleton-load {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+.skeleton-main-img {
+  height: 200px;
+}
+.skeleton-text {
+  height: 10px;
+  width: 80%;
+  border-radius: 50px;
+  margin-bottom: 5px;
+}
+.skeleton-title {
+  width: 100%;
+}
+.skeleton-info-img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.skeleton-info-text {
+  height: 8px;
+  width: 100px;
+  border-radius: 50px;
+}
