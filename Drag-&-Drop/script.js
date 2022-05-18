@@ -1,15 +1,38 @@
-const API_KEY = "563492ad6f91700001000001b7edd23984404c19b484f305bf6d1244";
-const API_URL = "https://api.pexels.com/v1/search?query=dasert&per_page=1";
+const draggableImg = document.querySelector("#draggable-img");
+const boxes = document.querySelectorAll(".box");
 
-const image = document.querySelector(".img");
+draggableImg.addEventListener("dragstart", dragStart);
+draggableImg.addEventListener("dragend", dragEnd);
 
-getImage();
+for (const box of boxes) {
+  box.addEventListener("dragover", dragOver);
+  box.addEventListener("dragenter", dragEnter);
+  box.addEventListener("dragleave", dragLeave);
+  box.addEventListener("drop", drop);
+}
 
-async function getImage() {
-  const response = await fetch(API_URL, {
-    headers: { Authorization: API_KEY },
-  });
-  const img = await response.json();
+function dragStart(e) {
+  e.target.className += " dragged";
+  setTimeout(() => (this.className = "invisible"), 0);
+}
 
-  image.src = img.photos[0].src.original;
+function dragEnd(e) {
+  e.target.className = "draggable-img";
+}
+
+function dragOver(e) {
+  e.preventDefault();
+}
+
+function dragEnter() {
+  this.className += " dragenter";
+}
+
+function dragLeave() {
+  this.className = "box";
+}
+
+function drop() {
+  this.className = "box";
+  this.append(draggableImg);
 }

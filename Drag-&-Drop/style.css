@@ -5,23 +5,75 @@
 body {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #3f51b5;
+  background-color: #009688;
+}
+.title {
+  font-size: 25px;
+  font-weight: 500;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  color: #fff;
+  margin-bottom: 30px;
 }
 .container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
+  padding: 30px;
 }
 .box {
   height: 150px;
   width: 150px;
   background-color: #fff;
   border: 2px solid #000;
+  /* overflow: hidden; */
 }
-.img {
+.box.dragenter {
+  background-color: rgba(0 0 0 / 40%);
+  border: 4px dashed #fff;
+  position: relative;
+}
+.draggable-img {
+  background-image: url("https://source.unsplash.com/random/150x150");
+  background-size: cover;
   height: 100%;
   width: 100%;
-  object-fit: cover;
-  /* cursor: grab; */
+  cursor: pointer;
+}
+.drag-img {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+.dragged {
+  border: 3px solid #fff;
+}
+.line {
+  height: 5px;
+  width: 60%;
+  background-color: #fff;
+}
+.state-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 50px;
+  width: 130px;
+  font-size: 15px;
+  font-family: sans-serif;
+  background-color: crimson;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 30px;
+  transition: 0.3s;
+}
+.state-btn.sorted {
+  background-color: #1b5e20;
 }

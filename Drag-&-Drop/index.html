@@ -5,21 +5,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <!-- <script src="script.js" defer></script> -->
+    <script src="sort-nums.js" defer></script>
     <title>Drag & Drop</title>
 </head>
 
 <body>
 
 
-    <div class="container">
-        <div draggable="true" class="box"><img draggable="true" class="img" src="" alt=""></div>
-        <div dropzone="true" class="box"></div>
+    <!-- <div class="container">
+        <div class="box">
+            <div class="draggable-img" id="draggable-img" draggable="true"></div>
+        </div>
+        <div class="box"></div>
         <div class="box"></div>
         <div class="box"></div>
         <div class="box"></div>
     </div>
+    <div class="line"></div> -->
+
+    <h1 class="title">Sort the photos until the button change to green</h1>
+
+    <div class="container">
+        <div class="num-holders box" data-number="one">
+            <div class="drag-img" draggable="true" data-num="four" style="background-image: url(imgs/four.jpg);"></div>
+        </div>
+        <div class="num-holders box" data-number="two">
+            <div class="drag-img" draggable="true" data-num="one" style="background-image: url(imgs/one.jpg);"></div>
+        </div>
+        <div class="num-holders box" data-number="three">
+            <div class="drag-img" draggable="true" data-num="five" style="background-image: url(imgs/five.jpg);"></div>
+        </div>
+        <div class="num-holders box" data-number="four">
+            <div class="drag-img" draggable="true" data-num="two" style="background-image: url(imgs/two.jpg);"></div>
+        </div>
+        <div class="num-holders box" data-number="five">
+            <div class="drag-img" draggable="true" data-num="three" style="background-image: url(imgs/three.jpg);">
+            </div>
+        </div>
+    </div>
+    <span class="state-btn" id="state-btn">
+        <span class="text">Not Sorted</span>
+        <i class="fa-solid fa-x"></i>
+    </span>
+
 
 
 </body>
