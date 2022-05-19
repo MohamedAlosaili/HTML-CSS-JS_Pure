@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+:root {
+  --background-color-dark: #0d1117;
+  --background-color-light: #161b22;
+  --btn-bg-color: #21262d;
+  --border-color: #363b42;
+  --text-color: #828a94;
+  --title-color: #c9d1d9;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color-dark);
+}
+main {
+  text-align: center;
+  max-width: 100%;
+  padding: 20px;
+  width: 800px;
+}
+.search {
+  width: 600px;
+  max-width: 90%;
+  height: 50px;
+  font-size: 18px;
+  border: 1px solid var(--border-color);
+  background-color: var(--background-color-light);
+  border-radius: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+  caret-color: var(--text-color);
+  color: var(--text-color);
+}
+.search:focus {
+  outline: none;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background-color: var(--background-color-light);
+  padding: 30px;
+  border-radius: 10px;
+}
+@media (max-width: 767px) {
+  .profile {
+    flex-direction: column;
+  }
+}
+.profile-img {
+  height: 200px;
+  width: 200px;
+  border: 20px solid var(--background-color-dark);
+  object-fit: cover;
+  border-radius: 50%;
+}
+.profile-info {
+  text-align: left;
+  color: var(--text-color);
+}
+@media (max-width: 767px) {
+  .profile-info {
+    text-align: center;
+  }
+}
+.profile-info .name {
+  color: var(--title-color);
+}
+.profile-info .name,
+.profile-info .user-name {
+  font-weight: 500;
+}
+.profile-info .user-name {
+  margin: 5px 0 30px;
+}
+.profile-info .numbers {
+  display: inline-flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  .profile-info .numbers {
+    gap: 10px;
+  }
+}
+.profile-info .discover-repos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+@media (max-width: 767px) {
+  .profile-info .discover-repos {
+    justify-content: center;
+  }
+}
+.profile-info .discover-repos a {
+  background-color: var(--background-color-dark);
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 10px;
+  border-radius: 5px;
+}
+.error-message {
+  text-align: center;
+  color: var(--text-color);
+  background-color: var(--background-color-light);
+  padding: 30px;
+  border-radius: 10px;
+}
