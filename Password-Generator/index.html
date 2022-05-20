@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Password Generator</title>
+</head>
+
+<body>
+
+    <section class="password-box">
+        <h1 class="title">Password Generator</h1>
+        <div class="show-password">
+            <div class="password" id="password"></div>
+            <button class="copy-btn btn" id="copy-btn"><i class="fa-solid fa-clipboard"></i></button>
+        </div>
+        <form class="form" id="form">
+            <div>
+                <label for="password-length">Password Length</label>
+                <input type="number" name="length" value="20" min="4" max="20" id="password-length">
+            </div>
+            <div>
+                <label for="uppercase">Include uppercase letters</label>
+                <input type="checkbox" id="uppercase" checked>
+            </div>
+            <div>
+                <label for="lowercase">Include lowercase letters</label>
+                <input type="checkbox" id="lowercase" checked>
+            </div>
+            <div>
+                <label for="numbers">Include numbers</label>
+                <input type="checkbox" id="numbers" checked>
+            </div>
+            <div>
+                <label for="symbols">Include symbols</label>
+                <input type="checkbox" id="symbols" checked>
+            </div>
+            <input type="submit" value="Generate Password" class="btn">
+        </form>
+    </section>
+</body>
+
+</html>
