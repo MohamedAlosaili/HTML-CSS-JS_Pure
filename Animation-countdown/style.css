@@ -22,12 +22,12 @@ h4 {
 }
 .box.flip {
   transform: translate(-50%, -50%) rotateY(180deg);
-  transform-origin: 60px 0;
+  transform-origin: 100px 0;
 }
 .face {
   position: absolute;
   height: 120px;
-  width: 120px;
+  width: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,7 +40,7 @@ h4 {
 }
 .numbers-holder {
   height: 50px;
-  width: 100px;
+  width: 200px;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
