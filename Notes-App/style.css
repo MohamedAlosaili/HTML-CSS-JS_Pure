@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+:root {
+  --background-color: #ffecb3;
+  --notes-color: #37474f;
+}
+body {
+  /* height: 100vh; */
+  background-color: var(--background-color);
+}
+.add-note {
+  width: fit-content;
+  display: block;
+  margin: 20px 20px 50px auto;
+  background-color: var(--notes-color);
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  user-select: none;
+  cursor: pointer;
+}
+.add-note:active {
+  transform: scale(0.98);
+}
+.notes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+  padding: 50px 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.note {
+  height: fit-content;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 4px 6px 10px rgb(0 0 0 / 15%);
+}
+.note::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 10px;
+  height: 20px;
+  background-color: #fff;
+}
+.note .options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--notes-color);
+}
+.note-text {
+  height: 350px;
+  width: 100%;
+  overflow-y: scroll;
+  background-color: #fff;
+  padding: 20px;
+  line-height: 1.5;
+  transition: 0.3s;
+}
+.note-text[contenteditable="true"] {
+  height: 400px;
+}
+.note-text:focus {
+  outline: none;
+}
+.note-text::-webkit-scrollbar {
+  cursor: pointer;
+  width: 10px;
+}
+.note-text::-webkit-scrollbar-track-piece {
+  background-color: rgba(55, 71, 79, 0.3);
+}
+.note-text::-webkit-scrollbar-thumb {
+  background-color: var(--notes-color);
+  border-radius: 10px;
+}
+.note .options .btn {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+.note .options .btn:focus {
+  outline: none;
+  border-bottom-color: #fff;
+}
+.note .options .btn:active .icon {
+  transform: scale(1.1);
+}
