@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f6f6;
+}
+.container {
+  height: 580px;
+  width: 500px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0 0 0 / 0.25);
+  position: relative;
+}
+.images-holder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
+.options {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.options .slide-btns {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+}
+.btn {
+  width: 100%;
+  font-size: 16px;
+  background-color: purple;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+.auto-slide {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.auto-slide .auto-toggler {
+  height: 20px;
+  width: 40px;
+  border-radius: 50px;
+  border: none;
+  background-color: #ddd;
+  padding: 2px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.auto-slide .auto-toggler.active {
+  background-color: #4caf50;
+}
+.auto-slide .auto-toggler .circle {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 16px;
+  width: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.auto-slide .auto-toggler.active .circle {
+  left: calc(100% - 18px);
+}
+@media (max-width: 600px) {
+  .container {
+    width: 350px;
+  }
+  .img {
+    width: 350px;
+  }
+}
