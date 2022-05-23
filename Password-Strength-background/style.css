@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+.log-in {
+  height: 100vh;
+  background-image: url(https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-size: cover;
+  background-position: bottom center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.back-blur {
+  position: absolute;
+  inset: 0;
+  background-color: transparent;
+  backdrop-filter: blur(50px);
+}
+.log-in-box {
+  padding: 40px 30px;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  position: relative;
+}
+.log-in-box .title {
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.log-in-box small {
+  color: #777;
+}
+.log-in-box .form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 15px;
+}
+.log-in-box .form .input {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.log-in-box .form .input:focus {
+  outline: none;
+  border-color: #aaa;
+}
+.log-in-box .form .btn {
+  font-size: 18px;
+  color: #fff;
+  background-color: #111;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.log-in-box .form .btn:active {
+  transform: scale(0.98);
+}
