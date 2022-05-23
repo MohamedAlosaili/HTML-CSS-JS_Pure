@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Mobile Tab Navigation</title>
+</head>
+
+<body>
+
+    <main class="mobile">
+        <div class="images">
+            <img src="imgs/home.jpg" alt="House Image" class="img active" data-img="home">
+            <img src="imgs/work.jpg" alt="Work Image" class="img" data-img="work">
+            <img src="imgs/blog.jpg" alt="Bloger Image" class="img" data-img="blog">
+            <img src="imgs/about.jpg" alt="Bloger Image" class="img" data-img="about">
+        </div>
+        <nav class="nav">
+            <button class="nav-item active" data-btn="home">
+                <i class="icon fa-solid fa-house"></i>
+                <span class="nav-name">Home</span>
+            </button>
+            <button class="nav-item" data-btn="work">
+                <i class="fa-solid fa-building"></i>
+                <span class="nav-name">Work</span>
+            </button>
+            <button class="nav-item" data-btn="blog">
+                <i class="icon fa-solid fa-book-open"></i>
+                <span class="nav-name">Blog</span>
+            </button>
+            <button class="nav-item" data-btn="about">
+                <i class="icon fa-solid fa-people-group"></i>
+                <span class="nav-name">About us</span>
+            </button>
+        </nav>
+    </main>
+
+</body>
+
+</html>
