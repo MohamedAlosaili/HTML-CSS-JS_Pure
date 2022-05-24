@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.magic-btn {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3f51b5;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.magic-btn:active {
+  transform: scale(0.98);
+}
+.btn-img {
+  height: 30px;
+  width: 30px;
+}
+.boxes-holder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 500px;
+  width: 500px;
+  display: grid;
+  grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+  gap: 0;
+  transition: 0.5s;
+}
+.boxes-holder.active {
+  gap: 25px;
+  height: 575px;
+  width: 575px;
+}
+.box {
+  height: 125px;
+  width: 125px;
+  background-image: url("https://c.tenor.com/jYqfbfE5wU4AAAAC/yay-yes.gif");
+  background-size: 500px 500px;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: 0.5s;
+}
+.boxes-holder.active .box {
+  transform: rotate(1turn);
+}
+.box::before,
+.box::after {
+  content: "";
+  position: absolute;
+}
+.box::before {
+  top: 8px;
+  right: -16px;
+  height: 100%;
+  width: 16px;
+  background-color: #7986cb;
+  transform: skewY(45deg);
+}
+.box::after {
+  bottom: -16px;
+  left: 8px;
+  height: 16px;
+  width: 100%;
+  background-color: #3f51b5;
+  transform: skewX(45deg);
+}
