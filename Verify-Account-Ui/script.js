@@ -8,7 +8,6 @@ const length = inputs.length;
 
 inputs.forEach((input, idx) => {
   input.addEventListener("keydown", (e) => {
-    // console.log(+e.key);
     if (!isNaN(e.key) | (e.key == " ")) {
       input.addEventListener("input", () => {
         if (input.value.length === 1) {
@@ -36,11 +35,7 @@ function checkCode() {
   const code = randomCode.querySelector("[data-code]");
   if (enteredCode === code.innerHTML) {
     resultPopup("right");
-    console.log("right");
-    console.log(enteredCode, code.innerHTML);
   } else {
-    console.log("wrong");
-    console.log(enteredCode, code.innerHTML);
     resultPopup("wrong");
   }
 }
