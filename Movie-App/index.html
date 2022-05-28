@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Movie App</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="search-area">
+            <input type="search" id="search">
+            <i class="icon fa-solid fa-magnifying-glass" id="icon"></i>
+        </div>
+    </header>
+    <section class="movies">
+        <div class="movies-container" id="movies-container">
+            <template id="template">
+                <div class="movie-card">
+                    <img src="" alt="" class="poster">
+                    <div class="card-body">
+                        <h2 class="title"></h2>
+                        <span class="rate"></span>
+                        <div class="overview">
+                            <h4>Overview</h4>
+                            <p class="text"></p>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </section>
+
+    <section class="video-section" id="video-section">
+        <div class="leyer"></div>
+        <iframe class="video-frame" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"
+            frameborder="no" scrolling="no">
+        </iframe>
+        <i class="close-icon fa-solid fa-circle-xmark"></i>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
