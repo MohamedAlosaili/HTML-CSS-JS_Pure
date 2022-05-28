@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  background-color: #f0f0f0;
+}
+.search-filter {
+  width: 300px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 2px 5px 16px rgba(0 0 0 / 0.22);
+}
+.top {
+  padding: 30px;
+  background-color: #283593;
+  color: #fff;
+}
+.top .title {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.top .text {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+.top .search {
+  width: 100%;
+  background-color: #3949ab;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+}
+.top .search:focus {
+  outline: none;
+}
+.users {
+  overflow-y: scroll;
+  background-color: #fff;
+  height: 450px;
+}
+.users .card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 30px;
+  border-bottom: 1px solid #ddd;
+}
+.card .img {
+  height: 70px;
+  width: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+}
+.card .name {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.card .location {
+  font-size: 14px;
+  color: #999;
+}
