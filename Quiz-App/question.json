@@ -1,0 +1,52 @@
+[
+    {
+        "question": "Inside which HTML element do we put the JavaScript?",
+        "answers": {
+            "answer_a": "<javascript>",
+            "answer_b": "<js>",
+            "answer_c": "<script>",
+            "answer_d": "<scripting>"
+        },
+        "correct_answer": "answer_c"
+    },
+    {
+        "question": "What is the correct JavaScript syntax to change the content of the HTML element below?",
+        "answers": {
+            "answer_a": "#demo.innerHTML = 'Hello World!';",
+            "answer_b": "document.getElement('p').innerHTML = 'Hello World!';",
+            "answer_c": "document.getElementById('demo').innerHTML = 'Hello World!';",
+            "answer_d": "document.getElementByName('p').innerHTML = 'Hello World!';"
+        },
+        "correct_answer": "answer_c"
+    },
+    {
+        "question": "Where is the correct place to insert a JavaScript?",
+        "answers": {
+            "answer_a": "The <head> section",
+            "answer_b": "The <footer>",
+            "answer_c": "The <body> section",
+            "answer_d": "Both the <head> section and the <body> section are correct"
+        },
+        "correct_answer": "answer_d"
+    },
+    {
+        "question": "How do you create a function in JavaScript?",
+        "answers": {
+            "answer_a": "function myFunction()",
+            "answer_b": "function = myFunction()",
+            "answer_c": "function = myFunction()",
+            "answer_d": null
+        },
+        "correct_answer": "answer_a"
+    },
+    {
+        "question": "How to write an IF statement in JavaScript?",
+        "answers": {
+            "answer_a": "if i = 5 then",
+            "answer_b": "if i == 5 then",
+            "answer_c": "if i = 5",
+            "answer_d": "if (i == 5)"
+        },
+        "correct_answer": "answer_d"
+    }
+]
