@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+}
+.testimonial-box {
+  width: min(90%, 800px);
+  min-height: 300px;
+  background-color: #3f51b5;
+  border-radius: 15px;
+  margin: auto;
+  padding: 50px;
+  color: #fff;
+  font-weight: 300;
+  position: relative;
+}
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 5px;
+}
+.loader > span {
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: jumping 0.6s infinite ease-in-out;
+}
+.loader > span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.loader > span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+@keyframes jumping {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.timer {
+  height: 3px;
+  width: 0;
+  background-color: #fff;
+  transition: 0.3s linear;
+}
+.message {
+  margin: 20px 0;
+  position: relative;
+}
+.message::before,
+.message::after {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 20px;
+  color: #c0c0c0;
+}
+.message::before {
+  position: absolute;
+  content: "\f10d";
+  left: -30px;
+}
+.message::after {
+  position: relative;
+  content: "\f10e";
+  left: 10px;
+}
+.clint-info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+.clint-info .avatar {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
