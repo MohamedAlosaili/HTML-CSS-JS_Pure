@@ -11,7 +11,7 @@ closeIcon.addEventListener("click", () => {
   iframe.src = "";
 });
 
-let apiKey = "k_5mv6s288";
+let apiKey = "";
 let moviesArr = [];
 
 let searchValue = "";
